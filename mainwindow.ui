@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>439</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ALSAConnector</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Connect</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButtonRec">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>199</y>
+          <width>391</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Connect</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonStop">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>250</y>
+          <width>391</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxClients">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>43</y>
+          <width>391</width>
+          <height>38</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox2">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>121</y>
+          <width>391</width>
+          <height>38</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSave">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>310</y>
+          <width>391</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>About</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QPlainTextEdit" name="plainTextEdit">
+          <property name="plainText">
+           <string>//midi connector app for Linux based standalone midi host adapters (xterm, aconnect)
+
+//Copyright (c) 2016-2023 A. Klumpp
+
+// *  This program is free software; you can redistribute it and/or modify
+// *  it under the terms of the GNU General Public License as published by
+// *  the Free Software Foundation; either version 2 of the License, or
+// *  (at your option) any later version.
+// *
+// *  This program is distributed in the hope that it will be useful,
+// *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+// *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// *  GNU General Public License for more details.
+// *
+// *  You should have received a copy of the GNU General Public License
+// *  along with this program; if not, write to the Free Software
+// *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+// *
+</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonRec</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotrec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonStop</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotstop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonSave</sender>
+   <signal>pressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotsave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>216</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotrec()</slot>
+  <slot>slotstop()</slot>
+  <slot>slotsave()</slot>
+ </slots>
+</ui>

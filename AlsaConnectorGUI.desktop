@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=AlsaConnectorGUI
+Version=0.0.16
+GenericName=AlsaConnectorGUI
+Comment=AlsaConnectorGUI
+Exec=/home/[user name]/AlsaConnectorGUI/AlsaConnectorGUI %F
+Categories=audio;Qt;
+Keywords=midi;
+Terminal=false
+Type=Application
+Name[en_CA]=AlsaConnectorGUI
